@@ -12,9 +12,11 @@ public class UserViewHolder extends RecyclerView.ViewHolder {
 
     private TextView textUsername;
     private TextView textEmail;
+    private View itemView;
 
     public UserViewHolder(View itemView) {
         super(itemView);
+        this.itemView = itemView;
         this.textUsername = (TextView) itemView.findViewById(R.id.text_username);
         this.textEmail = (TextView) itemView.findViewById(R.id.text_email);
     }
@@ -25,5 +27,9 @@ public class UserViewHolder extends RecyclerView.ViewHolder {
 
     public void setTextEmail(String text) {
         textEmail.setText(text);
+    }
+
+    public View getItemView() {
+        return itemView;
     }
 }
